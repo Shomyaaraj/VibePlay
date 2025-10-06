@@ -20,7 +20,7 @@ const Trending: React.FC = () => {
       setLoading(true);
       try {
         // Use a popular keyword to fetch songs
-        const trendingKeywords = ["best", "hit", "popular", "top"];
+        const trendingKeywords = ["best", "telegu","hit", "popular", "top"];
         let allSongs: ApiSong[] = [];
 
         for (let keyword of trendingKeywords) {
