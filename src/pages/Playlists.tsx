@@ -19,7 +19,6 @@ interface ApiPlaylist {
   songs: ApiSong[];
 }
 
-// Define playlist queries
 const playlistQueries = [
   { id: 'best-hits', name: 'Best Hits', description: 'Top trending songs from Saavn', query: 'best',coverUrl: 'https://images.pexels.com/photos/14812289/pexels-photo-14812289.jpeg'  },
   { id: 'Gym', name: 'GYM Motivation', description: 'enhance your workout', query: 'workout hindi', coverUrl:'https://images.pexels.com/photos/841130/pexels-photo-841130.jpeg' },
@@ -75,7 +74,7 @@ const Playlists: React.FC = () => {
 
   const getTotalDuration = (playlistId: string) => {
     const playlistSongs = getPlaylistSongs(playlistId);
-    // Fallback duration of 200s per song
+ 
     const totalSeconds = playlistSongs.reduce((sum, song) => sum + 200, 0);
     const hours = Math.floor(totalSeconds / 3600);
     const minutes = Math.floor((totalSeconds % 3600) / 60);
